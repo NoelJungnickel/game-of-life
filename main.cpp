@@ -1,23 +1,28 @@
-#include"Header.h"
+#include "Header.h"
 
+int main()
+{
+	// Hier den Seed fuer Zufallszahlen
+	srand(time(NULL));
 
+	// Erstellt eine Instanz der Klasse Welt
+	World myWorld(120, 40);
 
-int main() {
-	//Hier den Seed für Zufallszahlen
+	while (true)
+	{
+		// zeigt die Welt an
+		myWorld.see();
 
-	//Erstellt eine Instanz der Klasse Welt
+		// updatet die Welt
+		myWorld.update();
 
-
-	while (true) {
-
-		//zeigt die Welt an
-
-		//updatet die Welt
-
-
-		//wartet 2 Sekunden
+		// wartet 2 Sekunden
 		Sleep(2000);
-		//Löscht die alte Konsolenanzeige
+
+		// Loescht die alte Konsolenanzeige
 		system("cls");
 	}
+
+	return 0;
+	// compilen mit g++ -o GameOfLife.exe main.cpp World.cpp
 }
