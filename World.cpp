@@ -51,8 +51,9 @@ void World::update()
 
 int World::livingNeigbours(int i, int j)
 {
-    // checkt Nachbarn oben
     int counter = 0;
+
+    // checkt Nachbarn oben
     if (i != 0)
     {
         if (grid[i - 1][j] == '0')
