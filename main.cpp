@@ -6,7 +6,7 @@ int main()
 	srand(time(NULL));
 
 	// Erstellt eine Instanz der Klasse Welt
-	World newWorld(200, 70);
+	World newWorld(230, 60);
 
 	while (true)
 	{
