@@ -7,7 +7,6 @@ int main()
 
 	// Erstellt eine Instanz der Klasse Welt
 	World newWorld(200, 70);
-	// World newWorld(3, 3);
 
 	while (true)
 	{
@@ -18,8 +17,7 @@ int main()
 		newWorld.update();
 
 		// wartet 2 Sekunden
-		// Sleep(2000);
-		Sleep(200);
+		Sleep(2000);
 
 		// Loescht die alte Konsolenanzeige
 		system("cls");
