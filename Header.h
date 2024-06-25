@@ -18,6 +18,11 @@ public:
 	zufaellig gefuellt mit Lebenden und Toten Zellen*/
 	World(int size, int rows);
 
+	/*Konstruktor von World
+	erstellt einen Vektor grid
+	gefuellt mit FORTNITE*/
+	World();
+
 	// Zeigt auf der Konsole die Welt an
 	void see();
 

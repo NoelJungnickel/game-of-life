@@ -16,6 +16,40 @@ World::World(int size, int rows)
     }
 }
 
+World::World()
+{
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                000000000   000000000   00000000    000000000   000      000   000   000000000   000000000                                                ");
+    grid.push_back("                                                000000000   000000000   000000000   000000000   0000     000   000   000000000   000000000                                                ");
+    grid.push_back("                                                000         000   000   000   000      000      00000    000   000      000      000                                                      ");
+    grid.push_back("                                                000         000   000   000   000      000      000000   000   000      000      000                                                      ");
+    grid.push_back("                                                0000000     000   000   000000000      000      000 000  000   000      000      0000000                                                  ");
+    grid.push_back("                                                0000000     000   000   00000000       000      000  000 000   000      000      0000000                                                  ");
+    grid.push_back("                                                000         000   000   000   000      000      000   000000   000      000      000                                                      ");
+    grid.push_back("                                                000         000   000   000   000      000      000    00000   000      000      000                                                      ");
+    grid.push_back("                                                000         000000000   000   000      000      000     0000   000      000      000000000                                                ");
+    grid.push_back("                                                000         000000000   000   000      000      000      000   000      000      000000000                                                ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+    grid.push_back("                                                                                                                                                                                          ");
+}
+
 void World::see()
 {
     for (const auto &row : grid)
@@ -32,7 +66,23 @@ void World::update()
     {
         for (int y = 0; y < grid[x].size(); ++y)
         {
-            if (livingNeigbours(x, y) > 3)
+            // extra Regel: "Matrix"
+            if (livingNeigbours(x, y) == 8)
+            {
+                for (int z = 0; z < grid.size(); ++z)
+                {
+                    grid2[z][y] = '0';
+                }
+            }
+            // extra Regel: "Laser"
+            else if (livingNeigbours(x, y) == 7)
+            {
+                for (int z = 0; z < grid[x].size(); ++z)
+                {
+                    grid2[x][z] = ' ';
+                }
+            }
+            else if (livingNeigbours(x, y) > 3)
             {
                 grid2[x][y] = ' ';
             }
