@@ -32,5 +32,5 @@ private:
 
 	/*berechnet fuer ein Feld i des Vectors grid
 	die Anzahl lebender Nachbarn*/
-	int livingNeigbours(int i);
+	int livingNeigbours(int i, int j);
 };

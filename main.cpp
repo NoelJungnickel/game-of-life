@@ -6,18 +6,20 @@ int main()
 	srand(time(NULL));
 
 	// Erstellt eine Instanz der Klasse Welt
-	World myWorld(120, 40);
+	World newWorld(200, 70);
+	// World newWorld(3, 3);
 
 	while (true)
 	{
 		// zeigt die Welt an
-		myWorld.see();
+		newWorld.see();
 
 		// updatet die Welt
-		myWorld.update();
+		newWorld.update();
 
 		// wartet 2 Sekunden
-		Sleep(2000);
+		// Sleep(2000);
+		Sleep(200);
 
 		// Loescht die alte Konsolenanzeige
 		system("cls");
