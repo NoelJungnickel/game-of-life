@@ -27,7 +27,6 @@ public:
 	void update();
 
 private:
-	int rows;
 	vector<string> grid;
 
 	/*berechnet fuer ein Feld i des Vectors grid

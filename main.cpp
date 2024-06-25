@@ -17,7 +17,7 @@ int main()
 		newWorld.update();
 
 		// wartet 2 Sekunden
-		Sleep(2000);
+		Sleep(500);
 
 		// Loescht die alte Konsolenanzeige
 		system("cls");
